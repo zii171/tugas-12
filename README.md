@@ -3,38 +3,38 @@
 ## Struktur Folder
 ```
 tugas12/
-├── backend-auth/                  # NestJS: Auth (JWT) + Products CRUD
+├── backend-auth/                 
 │   └── src/
-│       ├── main.ts                # CORS + prefix /api/v1
+│       ├── main.ts                
 │       ├── app.module.ts
 │       ├── auth/
-│       │   ├── auth.module.ts     # daftar JwtModule (secret + expiresIn)
-│       │   ├── auth.controller.ts # /auth/register, /auth/login
-│       │   ├── auth.service.ts    # logic register & login, generate JWT
+│       │   ├── auth.module.ts     
+│       │   ├── auth.controller.ts
+│       │   ├── auth.service.ts    
 │       │   ├── dto/
 │       │   │   ├── register.dto.ts
 │       │   │   └── login.dto.ts
 │       │   ├── strategies/
-│       │   │   └── jwt.strategy.ts # verifikasi signature & expiry token
+│       │   │   └── jwt.strategy.ts
 │       │   └── guards/
 │       │       └── jwt-auth.guard.ts
 │       ├── users/
 │       │   ├── users.module.ts
-│       │   ├── users.service.ts   # simpan user, hash password (bcrypt)
+│       │   ├── users.service.ts   
 │       │   └── entities/user.entity.ts
 │       └── products/
 │           ├── products.module.ts
-│           ├── products.controller.ts # semua route @UseGuards(JwtAuthGuard)
+│           ├── products.controller.ts 
 │           ├── products.service.ts
 │           ├── dto/
 │           └── entities/product.entity.ts
 │
-└── frontend-auth/                 # React (Vite) + React Router
+└── frontend-auth/                
     └── src/
-        ├── api/axiosInstance.js   # interceptor: sisipkan token, handle 401
-        ├── context/AuthContext.jsx # state login/logout/token (localStorage)
+        ├── api/axiosInstance.js   
+        ├── context/AuthContext.jsx 
         ├── components/
-        │   ├── ProtectedRoute.jsx # redirect ke /login jika belum login
+        │   ├── ProtectedRoute.jsx 
         │   ├── Modal.jsx
         │   ├── ToastContainer.jsx
         │   ├── ProductForm.jsx
@@ -43,8 +43,8 @@ tugas12/
         ├── pages/
         │   ├── LoginPage.jsx
         │   ├── RegisterPage.jsx
-        │   └── ProductList.jsx    # halaman utama (protected)
-        └── App.jsx                # routing: /login, /register, / (protected)
+        │   └── ProductList.jsx    
+        └── App.jsx                
 ```
 
 ## Cara Menjalankan
